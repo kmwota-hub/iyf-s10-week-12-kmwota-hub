@@ -11,6 +11,8 @@ app.use(cors({
   origin: '*'
 }));
 
+console.log(process.env.MONGODB_URI);
+
 // Connect DB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
